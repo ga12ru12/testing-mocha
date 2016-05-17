@@ -33,7 +33,7 @@ describe('Blobs', function() {
     chai.request(server)
       .get('/blobs')
       .end(function(err, res){
-        res.should.have.status(400);
+        res.should.have.status(200);
         res.should.be.json;
         res.body.should.be.a('array');
         res.body[0].should.have.property('_id');
