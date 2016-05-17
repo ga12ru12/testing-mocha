@@ -37,8 +37,10 @@ app.use('/', routes);
 
 // *** server config *** //
 var server   = http.createServer(app);
-server.listen(1337, function() {
-  console.log("Node server running on http://localhost:1337");
+var port = 1337;
+if(process.env.NODE_ENV === 'test') port = 1338;
+server.listen(port, function() {
+  console.log("Node server running on http://localhost:"+port);
 });
 
 module.exports = app;
