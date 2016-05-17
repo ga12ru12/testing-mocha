@@ -3,7 +3,7 @@ var router = express.Router();
 var Blob = require('../models/blob');
 
 router.get('/', function(req, res, next) {
-  res.send('Hello, enouvo!');
+  res.send('Hello, QuangHD!');
 });
 
 // *** api routes *** //
