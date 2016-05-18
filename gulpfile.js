@@ -12,6 +12,7 @@ const browserify   = require('gulp-browserify');
 const minifycss    = require('gulp-clean-css');
 const uglify       = require('gulp-uglify');
 const stripDebug   = require('gulp-strip-debug');
+const imagemin     = require('gulp-imagemin');
 const _            = require('lodash');
 
 /***************** CONFIGURATION *****************/
@@ -74,6 +75,7 @@ var tasks = {
   copyImage: function( $target ) {
     return gulp.src( $target.img )
       .pipe(plumber())
+      .pipe(imagemin())
       .pipe(gulp.dest( $target.dst + '/img' ))
       ;
   },
