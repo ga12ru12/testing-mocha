@@ -4,7 +4,7 @@ var Blob = require('../models/blob');
 
 router.get('/', function(req, res, next) {
   console.log('++++++');
-  res.send('Hello, Loan!');
+  res.render('index.html');
 });
 
 // *** api routes *** //
